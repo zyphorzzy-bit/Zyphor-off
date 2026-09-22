@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Editor — Zyphor Cloud</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        ZYPHOR<span>CLOUD</span>
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="bots.html">
+            Meus bots
+        </a>
+
+        <a href="conta.html">
+            Conta
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="editor-layout">
+
+    <aside class="file-sidebar">
+
+        <div class="file-sidebar-header">
+
+            <h3>
+                Arquivos
+            </h3>
+
+            <button
+                class="button secondary"
+                type="button"
+            >
+                +
+            </button>
+
+        </div>
+
+        <div class="file-tree">
+
+            <p class="muted">
+                Carregando...
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <section class="editor-main">
+
+        <div class="editor-toolbar">
+
+            <span class="editor-file-name">
+                Nenhum arquivo selecionado
+            </span>
+
+            <div class="editor-actions">
+
+                <button
+                    type="button"
+                    onclick="saveFile()"
+                >
+                    Salvar
+                </button>
+
+                <button
+                    type="button"
+                    onclick="deleteFile()"
+                >
+                    Excluir
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <textarea
+            class="code-editor"
+            spellcheck="false"
+            placeholder="Selecione um arquivo..."
+        ></textarea>
+
+
+        <section class="console-panel">
+
+            <div class="console-header">
+                Console
+            </div>
+
+            <div class="console-content">
+
+                <div>
+                    Aguardando logs...
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<script src="js/api.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/editor.js"></script>
+
+</body>
+</html>
