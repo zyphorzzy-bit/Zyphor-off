@@ -1,1 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar bot — Zyphor Cloud</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="sidebar-logo">
+            ZYPHOR<span>CLOUD</span>
+        </a>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="bots.html">
+                <span>◈</span>
+                Meus bots
+            </a>
+
+            <a href="deploy.html" class="active">
+                <span>＋</span>
+                Criar bot
+            </a>
+
+            <a href="planos.html">
+                <span>◇</span>
+                Planos
+            </a>
+
+            <a href="pagamentos.html">
+                <span>▣</span>
+                Pagamentos
+            </a>
+
+            <a href="suporte.html">
+                <span>?</span>
+                Suporte
+            </a>
+
+            <a href="conta.html">
+                <span>○</span>
+                Minha conta
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="dashboard-content">
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    NOVO PROJETO
+                </span>
+
+                <h1>
+                    Criar bot
+                </h1>
+
+                <p>
+                    Configure seu projeto antes de realizar o deploy.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <div class="editor-layout">
+
+            <section class="editor-main">
+
+                <div class="editor-panel">
+
+                    <div class="editor-panel-header">
+
+                        <div>
+                            <h2>Informações do bot</h2>
+
+                            <p>
+                                Defina as informações básicas do seu projeto.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="editor-form">
+
+                        <label>
+
+                            Nome do bot
+
+                            <input
+                                type="text"
+                                placeholder="Ex: Zyphor Support"
+                            >
+
+                        </label>
+
+
+                        <label>
+
+                            Descrição
+
+                            <input
+                                type="text"
+                                placeholder="Uma breve descrição do seu bot"
+                            >
+
+                        </label>
+
+
+                        <label>
+
+                            Linguagem
+
+                            <select>
+
+                                <option>
+                                    Node.js
+                                </option>
+
+                                <option>
+                                    Python
+                                </option>
+
+                                <option>
+                                    Java
+                                </option>
+
+                            </select>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="editor-panel">
+
+                    <div class="editor-panel-header">
+
+                        <div>
+
+                            <h2>Origem do projeto</h2>
+
+                            <p>
+                                Escolha como deseja enviar seu projeto.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="source-options">
+
+                        <button class="source-card active">
+
+                            <span class="source-icon">
+                                G
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    GitHub
+                                </strong>
+
+                                <small>
+                                    Importar um repositório
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button class="source-card">
+
+                            <span class="source-icon">
+                                ↑
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Arquivo ZIP
+                                </strong>
+
+                                <small>
+                                    Enviar seu projeto
+                                </small>
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="source-input">
+
+                        <label>
+
+                            URL do repositório
+
+                            <input
+                                type="url"
+                                placeholder="https://github.com/usuario/projeto"
+                            >
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="editor-panel">
+
+                    <div class="editor-panel-header">
+
+                        <div>
+
+                            <h2>Configuração</h2>
+
+                            <p>
+                                Configure como seu bot será iniciado.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="editor-form">
+
+                        <label>
+
+                            Branch
+
+                            <input
+                                type="text"
+                                value="main"
+                            >
+
+                        </label>
+
+
+                        <label>
+
+                            Arquivo de inicialização
+
+                            <input
+                                type="text"
+                                placeholder="index.js"
+                            >
+
+                        </label>
+
+
+                        <label>
+
+                            Comando de inicialização
+
+                            <input
+                                type="text"
+                                placeholder="node index.js"
+                            >
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="editor-actions">
+
+                    <a
+                        href="dashboard.html"
+                        class="button secondary"
+                    >
+                        Cancelar
+                    </a>
+
+                    <button class="button primary">
+                        Criar bot
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <aside class="editor-side">
+
+                <div class="deploy-summary">
+
+                    <span class="eyebrow">
+                        RESUMO
+                    </span>
+
+                    <h3>
+                        Seu novo bot
+                    </h3>
+
+                    <div class="summary-row">
+
+                        <span>Plano</span>
+
+                        <strong>Free</strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>Limite</span>
+
+                        <strong>1 bot</strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>Runtime</span>
+
+                        <strong>Node.js</strong>
+
+                    </div>
+
+
+                    <div class="summary-status">
+
+                        <span class="status-dot"></span>
+
+                        Pronto para configurar
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
