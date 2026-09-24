@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suporte — Zyphor Cloud</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="sidebar-logo">
+            ZYPHOR<span>CLOUD</span>
+        </a>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="bots.html">
+                <span>◈</span>
+                Meus bots
+            </a>
+
+            <a href="deploy.html">
+                <span>＋</span>
+                Criar bot
+            </a>
+
+            <a href="planos.html">
+                <span>◇</span>
+                Planos
+            </a>
+
+            <a href="pagamentos.html">
+                <span>▣</span>
+                Pagamentos
+            </a>
+
+            <a href="suporte.html" class="active">
+                <span>?</span>
+                Suporte
+            </a>
+
+            <a href="conta.html">
+                <span>○</span>
+                Minha conta
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="dashboard-content">
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    CENTRAL DE AJUDA
+                </span>
+
+                <h1>
+                    Suporte
+                </h1>
+
+                <p>
+                    Precisa de ajuda? Abra um atendimento com nossa equipe.
+                </p>
+
+            </div>
+
+            <button class="button primary" id="open-ticket">
+                + Abrir atendimento
+            </button>
+
+        </header>
+
+
+        <section class="support-grid">
+
+            <div class="support-card">
+
+                <div class="support-icon">
+                    ?
+                </div>
+
+                <div>
+                    <h2>
+                        Suporte
+                    </h2>
+
+                    <p>
+                        Problemas com sua conta, plano ou plataforma.
+                    </p>
+                </div>
+
+                <button class="support-link" data-type="suporte">
+                    Abrir atendimento →
+                </button>
+
+            </div>
+
+
+            <div class="support-card">
+
+                <div class="support-icon">
+                    !
+                </div>
+
+                <div>
+                    <h2>
+                        Relatar problema
+                    </h2>
+
+                    <p>
+                        Encontrou um erro ou comportamento inesperado?
+                    </p>
+                </div>
+
+                <button class="support-link" data-type="bug">
+                    Relatar problema →
+                </button>
+
+            </div>
+
+
+            <div class="support-card">
+
+                <div class="support-icon">
+                    i
+                </div>
+
+                <div>
+                    <h2>
+                        Dúvidas
+                    </h2>
+
+                    <p>
+                        Tire suas dúvidas sobre o funcionamento da plataforma.
+                    </p>
+                </div>
+
+                <button class="support-link" data-type="duvida">
+                    Tirar dúvida →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="dashboard-panel tickets-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Meus atendimentos
+                    </h2>
+
+                    <p>
+                        Acompanhe seus chamados recentes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="ticket-empty">
+
+                <div class="empty-icon">
+                    ?
+                </div>
+
+                <h3>
+                    Nenhum atendimento aberto
+                </h3>
+
+                <p>
+                    Quando você abrir um atendimento, ele aparecerá aqui.
+                </p>
+
+                <button class="button primary" id="empty-ticket">
+                    Abrir atendimento
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="support-info">
+
+            <strong>
+                Atendimento oficial
+            </strong>
+
+            <span>
+                Nossa equipe pode ajudar com bots, pagamentos, conta e problemas técnicos.
+            </span>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div class="ticket-modal" id="ticket-modal">
+
+    <div class="ticket-modal-content">
+
+        <div class="ticket-modal-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    NOVO ATENDIMENTO
+                </span>
+
+                <h2>
+                    Abrir ticket
+                </h2>
+
+            </div>
+
+            <button class="modal-close" id="close-ticket">
+                ×
+            </button>
+
+        </div>
+
+
+        <label>
+            Tipo de atendimento
+
+            <select id="ticket-type">
+
+                <option value="suporte">
+                    Suporte
+                </option>
+
+                <option value="bug">
+                    Problema / Bug
+                </option>
+
+                <option value="duvida">
+                    Dúvida
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Assunto
+
+            <input
+                type="text"
+                placeholder="Ex: Meu bot não inicia"
+            >
+
+        </label>
+
+
+        <label>
+            Mensagem
+
+            <textarea
+                rows="5"
+                placeholder="Explique o que aconteceu..."
+            ></textarea>
+
+        </label>
+
+
+        <div class="ticket-modal-actions">
+
+            <button class="button secondary" id="cancel-ticket">
+                Cancelar
+            </button>
+
+            <button class="button primary">
+                Criar atendimento
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+const modal = document.getElementById("ticket-modal");
+
+const openButtons = [
+    document.getElementById("open-ticket"),
+    document.getElementById("empty-ticket")
+];
+
+const closeButton = document.getElementById("close-ticket");
+const cancelButton = document.getElementById("cancel-ticket");
+
+openButtons.forEach(button => {
+
+    if (!button) return;
+
+    button.addEventListener("click", () => {
+        modal.classList.add("show");
+    });
+
+});
+
+document.querySelectorAll(".support-link").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        document.getElementById("ticket-type").value =
+            button.dataset.type;
+
+        modal.classList.add("show");
+
+    });
+
+});
+
+function closeModal() {
+    modal.classList.remove("show");
+}
+
+closeButton.addEventListener("click", closeModal);
+cancelButton.addEventListener("click", closeModal);
+
+modal.addEventListener("click", event => {
+
+    if (event.target === modal) {
+        closeModal();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
