@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zyphor Cloud — Hospedagem de Bots</title>
+    <meta
+        name="description"
+        content="Zyphor Cloud — plataforma para hospedagem e gerenciamento de bots."
+    >
+
+    <link rel="stylesheet" href="frontend/css/global.css">
+    <link rel="stylesheet" href="frontend/css/responsive.css">
+
+    <style>
+        .home {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .home-nav {
+            height: 72px;
+            padding: 0 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #202020;
+            background: rgba(7, 7, 7, .96);
+        }
+
+        .home-logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .home-logo span {
+            color: #777;
+            font-weight: 500;
+        }
+
+        .home-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .home-links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 13px;
+            transition: .2s;
+        }
+
+        .home-links a:hover {
+            color: #fff;
+        }
+
+        .home-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .home-button {
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #292929;
+            color: #aaa;
+            background: #111;
+        }
+
+        .home-button:hover {
+            color: #fff;
+            border-color: #444;
+        }
+
+        .home-button.primary {
+            background: #fff;
+            color: #080808;
+            border-color: #fff;
+        }
+
+        .hero {
+            flex: 1;
+            max-width: 1250px;
+            width: 86%;
+            margin: auto;
+            padding: 90px 0;
+            display: grid;
+            grid-template-columns: 1fr 430px;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            padding: 7px 11px;
+            border: 1px solid #292929;
+            border-radius: 20px;
+            color: #999;
+            background: #0e0e0e;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin: 20px 0 18px;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: .98;
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span {
+            color: #777;
+        }
+
+        .hero p {
+            max-width: 560px;
+            color: #888;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .hero-action {
+            padding: 13px 19px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid #303030;
+            color: #bbb;
+            background: #111;
+        }
+
+        .hero-action:hover {
+            color: #fff;
+            border-color: #444;
+        }
+
+        .hero-action.primary {
+            color: #050505;
+            background: #fff;
+            border-color: #fff;
+        }
+
+        .hero-visual {
+            height: 420px;
+            border: 1px solid #252525;
+            border-radius: 20px;
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    #242424 0,
+                    #121212 35%,
+                    #0a0a0a 70%
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-visual::before {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border: 1px solid #303030;
+            border-radius: 50%;
+        }
+
+        .hero-visual::after {
+            content: "";
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border: 1px solid #292929;
+            border-radius: 50%;
+        }
+
+        .hero-cloud {
+            width: 110px;
+            height: 110px;
+            border-radius: 28px;
+            background: #fff;
+            color: #050505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 70px rgba(255,255,255,.08);
+        }
+
+        .features {
+            max-width: 1250px;
+            width: 86%;
+            margin: 0 auto 80px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .feature {
+            padding: 25px;
+            border: 1px solid #222;
+            border-radius: 13px;
+            background: #0d0d0d;
+        }
+
+        .feature-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 9px;
+            background: #181818;
+            border: 1px solid #292929;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+        }
+
+        .feature h3 {
+            margin: 17px 0 7px;
+            font-size: 14px;
+        }
+
+        .feature p {
+            margin: 0;
+            color: #666;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 850px) {
+            .home-nav {
+                padding: 0 5%;
+            }
+
+            .home-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 65px 0;
+                gap: 45px;
+            }
+
+            .hero-visual {
+                height: 300px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .home-buttons .home-button:first-child {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .hero-action {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="home">
+
+    <nav class="home-nav">
+
+        <a href="index.html" class="home-logo">
+            ZYPHOR <span>CLOUD</span>
+        </a>
+
+        <div class="home-links">
+            <a href="frontend/planos.html">Planos</a>
+            <a href="frontend/suporte.html">Suporte</a>
+            <a href="frontend/login.html">Dashboard</a>
+        </div>
+
+        <div class="home-buttons">
+            <a href="frontend/login.html" class="home-button">
+                Entrar
+            </a>
+
+            <a href="frontend/cadastro.html" class="home-button primary">
+                Criar conta
+            </a>
+        </div>
+
+    </nav>
+
+
+    <main class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                ZYPHOR CLOUD
+            </span>
+
+            <h1>
+                Seu bot.
+                <br>
+                <span>Sua infraestrutura.</span>
+            </h1>
+
+            <p>
+                Hospede e gerencie seus bots em um único lugar.
+                Tenha controle sobre arquivos, deploys, variáveis,
+                console e recursos da sua aplicação.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="frontend/cadastro.html"
+                    class="hero-action primary"
+                >
+                    Começar agora
+                </a>
+
+                <a
+                    href="frontend/planos.html"
+                    class="hero-action"
+                >
+                    Ver planos
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="hero-cloud">
+                Z
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ◈
+            </div>
+
+            <h3>
+                Gerenciamento
+            </h3>
+
+            <p>
+                Controle seus bots, arquivos,
+                variáveis e configurações.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ▶
+            </div>
+
+            <h3>
+                Deploy simples
+            </h3>
+
+            <p>
+                Importe projetos pelo GitHub
+                ou envie seu projeto em ZIP.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ▣
+            </div>
+
+            <h3>
+                Console e recursos
+            </h3>
+
+            <p>
+                Acompanhe logs, status, memória,
+                CPU e armazenamento.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>
