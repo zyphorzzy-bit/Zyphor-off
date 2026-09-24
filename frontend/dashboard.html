@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Dashboard — Zyphor Cloud</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="sidebar-logo">
+            ZYPHOR<span>CLOUD</span>
+        </a>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="bots.html">
+                <span>◈</span>
+                Meus bots
+            </a>
+
+            <a href="deploy.html">
+                <span>＋</span>
+                Criar bot
+            </a>
+
+            <a href="planos.html">
+                <span>◇</span>
+                Planos
+            </a>
+
+            <a href="pagamentos.html">
+                <span>▣</span>
+                Pagamentos
+            </a>
+
+            <a href="suporte.html">
+                <span>?</span>
+                Suporte
+            </a>
+
+            <a href="conta.html">
+                <span>○</span>
+                Minha conta
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    Z
+                </div>
+
+                <div>
+                    <strong>Usuário</strong>
+                    <small>Plano Free</small>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="logout-link">
+                Sair da conta
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-content">
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    VISÃO GERAL
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Gerencie seus bots e acompanhe sua conta.
+                </p>
+
+            </div>
+
+            <a href="deploy.html" class="button primary">
+                + Criar bot
+            </a>
+
+        </header>
+
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span>BOTS</span>
+                <strong>0</strong>
+                <small>1 disponível no Free</small>
+            </div>
+
+            <div class="stat-card">
+                <span>ONLINE</span>
+                <strong>0</strong>
+                <small>Nenhum bot ativo</small>
+            </div>
+
+            <div class="stat-card">
+                <span>ARMAZENAMENTO</span>
+                <strong>0 MB</strong>
+                <small>Espaço utilizado</small>
+            </div>
+
+            <div class="stat-card">
+                <span>PLANO</span>
+                <strong>Free</strong>
+                <small>Plano atual</small>
+            </div>
+
+        </section>
+
+
+        <section class="dashboard-panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h2>Seus bots</h2>
+                    <p>Gerencie seus projetos hospedados.</p>
+                </div>
+
+                <a href="bots.html">
+                    Ver todos
+                </a>
+
+            </div>
+
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    +
+                </div>
+
+                <h3>
+                    Você ainda não possui bots
+                </h3>
+
+                <p>
+                    Crie seu primeiro bot para começar a utilizar o Zyphor Cloud.
+                </p>
+
+                <a href="deploy.html" class="button primary">
+                    Criar primeiro bot
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="dashboard-panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h2>Atividade recente</h2>
+                    <p>Últimas ações da sua conta.</p>
+                </div>
+
+            </div>
+
+            <div class="activity-empty">
+                Nenhuma atividade recente.
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
