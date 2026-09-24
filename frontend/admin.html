@@ -1,1 +1,943 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo — Zyphor Cloud</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="admin-page">
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+            <div class="admin-brand-icon">Z</div>
+
+            <div class="admin-brand-text">
+                <strong>ZYPHOR</strong>
+                <span>CLOUD</span>
+            </div>
+        </div>
+
+        <nav class="admin-nav">
+
+            <a href="admin.html" class="active">
+                <span>⌂</span>
+                <span>Início</span>
+            </a>
+
+            <a href="#">
+                <span>♙</span>
+                <span>Usuários</span>
+            </a>
+
+            <a href="bots.html">
+                <span>◈</span>
+                <span>Bots</span>
+            </a>
+
+            <a href="planos.html">
+                <span>◇</span>
+                <span>Planos</span>
+            </a>
+
+            <a href="pagamentos.html">
+                <span>▣</span>
+                <span>Pagamentos</span>
+            </a>
+
+            <a href="suporte.html">
+                <span>?</span>
+                <span>Suporte</span>
+            </a>
+
+            <a href="#">
+                <span>▤</span>
+                <span>Logs</span>
+            </a>
+
+            <a href="#">
+                <span>⚙</span>
+                <span>Configurações</span>
+            </a>
+
+        </nav>
+
+        <div class="admin-sidebar-bottom">
+
+            <div class="admin-system-status">
+                <span class="status-dot"></span>
+                Sistema online
+            </div>
+
+            <small>
+                Zyphor Cloud<br>
+                Painel administrativo
+            </small>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="admin-content">
+
+        <!-- HEADER -->
+        <header class="admin-header">
+
+            <div class="admin-header-title">
+
+                <span class="admin-eyebrow">
+                    ADMINISTRAÇÃO
+                </span>
+
+                <h1>Painel Administrativo</h1>
+
+                <p>
+                    Gerencie usuários, bots, pagamentos e configurações do Zyphor Cloud.
+                </p>
+
+            </div>
+
+            <div class="admin-header-user">
+
+                <button
+                    class="admin-notification"
+                    id="notificationButton"
+                    type="button"
+                >
+                    ♧
+                    <span>3</span>
+                </button>
+
+                <div class="admin-avatar">
+                    A
+                </div>
+
+                <div class="admin-user-info">
+                    <strong>Administrador</strong>
+                    <small>SUPER ADMIN</small>
+                </div>
+
+                <span class="admin-chevron">⌄</span>
+
+            </div>
+
+        </header>
+
+
+        <!-- STATS -->
+        <section class="admin-stats">
+
+            <article class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ♙
+                </div>
+
+                <div class="admin-stat-content">
+                    <span>Total de usuários</span>
+
+                    <strong>1.248</strong>
+
+                    <small class="positive">
+                        ↑ 12% nos últimos 7 dias
+                    </small>
+                </div>
+
+            </article>
+
+
+            <article class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ◈
+                </div>
+
+                <div class="admin-stat-content">
+                    <span>Total de bots</span>
+
+                    <strong>2.463</strong>
+
+                    <small class="positive">
+                        ↑ 8% nos últimos 7 dias
+                    </small>
+                </div>
+
+            </article>
+
+
+            <article class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ▣
+                </div>
+
+                <div class="admin-stat-content">
+                    <span>Pagamentos pendentes</span>
+
+                    <strong>18</strong>
+
+                    <small class="negative">
+                        18 aguardando aprovação
+                    </small>
+                </div>
+
+            </article>
+
+
+            <article class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ♛
+                </div>
+
+                <div class="admin-stat-content">
+                    <span>Assinaturas ativas</span>
+
+                    <strong>1.072</strong>
+
+                    <small class="positive">
+                        ↑ 10% planos em uso
+                    </small>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- GRID PRINCIPAL -->
+        <div class="admin-main-grid">
+
+            <div class="admin-main-column">
+
+
+                <!-- PAGAMENTOS -->
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Pagamentos pendentes</h2>
+
+                            <p>
+                                Pagamentos aguardando aprovação.
+                            </p>
+                        </div>
+
+                        <a href="pagamentos.html" class="admin-link">
+                            Ver todos
+                        </a>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Usuário</th>
+                                    <th>Plano</th>
+                                    <th>Valor</th>
+                                    <th>Comprovante</th>
+                                    <th>Data</th>
+                                    <th>Ações</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>#0124</td>
+
+                                    <td>
+                                        <strong>João Silva</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="plan-badge ouro">
+                                            Ouro
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 17,90</td>
+
+                                    <td>
+                                        <button
+                                            class="proof-button"
+                                            type="button"
+                                        >
+                                            ▧
+                                        </button>
+                                    </td>
+
+                                    <td>Hoje, 13:42</td>
+
+                                    <td class="table-actions">
+
+                                        <button
+                                            class="approve-button"
+                                            type="button"
+                                        >
+                                            Aprovar
+                                        </button>
+
+                                        <button
+                                            class="reject-button"
+                                            type="button"
+                                        >
+                                            Rejeitar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>#0123</td>
+
+                                    <td>
+                                        <strong>Maria Santos</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="plan-badge prata">
+                                            Prata
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 9,90</td>
+
+                                    <td>
+                                        <button
+                                            class="proof-button"
+                                            type="button"
+                                        >
+                                            ▧
+                                        </button>
+                                    </td>
+
+                                    <td>Hoje, 12:17</td>
+
+                                    <td class="table-actions">
+
+                                        <button
+                                            class="approve-button"
+                                            type="button"
+                                        >
+                                            Aprovar
+                                        </button>
+
+                                        <button
+                                            class="reject-button"
+                                            type="button"
+                                        >
+                                            Rejeitar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>#0122</td>
+
+                                    <td>
+                                        <strong>Pedro Costa</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="plan-badge bronze">
+                                            Bronze
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 4,90</td>
+
+                                    <td>
+                                        <button
+                                            class="proof-button"
+                                            type="button"
+                                        >
+                                            ▧
+                                        </button>
+                                    </td>
+
+                                    <td>Hoje, 11:03</td>
+
+                                    <td class="table-actions">
+
+                                        <button
+                                            class="approve-button"
+                                            type="button"
+                                        >
+                                            Aprovar
+                                        </button>
+
+                                        <button
+                                            class="reject-button"
+                                            type="button"
+                                        >
+                                            Rejeitar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>#0121</td>
+
+                                    <td>
+                                        <strong>Ana Lima</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="plan-badge diamante">
+                                            Diamante
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 29,90</td>
+
+                                    <td>
+                                        <button
+                                            class="proof-button"
+                                            type="button"
+                                        >
+                                            ▧
+                                        </button>
+                                    </td>
+
+                                    <td>Hoje, 09:56</td>
+
+                                    <td class="table-actions">
+
+                                        <button
+                                            class="approve-button"
+                                            type="button"
+                                        >
+                                            Aprovar
+                                        </button>
+
+                                        <button
+                                            class="reject-button"
+                                            type="button"
+                                        >
+                                            Rejeitar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- USUÁRIOS -->
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Últimos usuários</h2>
+
+                            <p>
+                                Contas criadas recentemente.
+                            </p>
+                        </div>
+
+                        <a href="#" class="admin-link">
+                            Ver todos
+                        </a>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Usuário</th>
+                                    <th>Email</th>
+                                    <th>Plano</th>
+                                    <th>Status</th>
+                                    <th>Cadastro</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>#1048</td>
+
+                                    <td>
+                                        <strong>João Silva</strong>
+                                    </td>
+
+                                    <td>
+                                        joao@email.com
+                                    </td>
+
+                                    <td>
+                                        <span class="plan-badge ouro">
+                                            Ouro
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge active">
+                                            Ativo
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Hoje, 11:24
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>#1047</td>
+
+                                    <td>
+                                        <strong>Maria Santos</strong>
+                                    </td>
+
+                                    <td>
+                                        maria@email.com
+                                    </td>
+
+                                    <td>
+                                        <span class="plan-badge prata">
+                                            Prata
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge active">
+                                            Ativo
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Hoje, 10:17
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>#1046</td>
+
+                                    <td>
+                                        <strong>Pedro Costa</strong>
+                                    </td>
+
+                                    <td>
+                                        pedro@email.com
+                                    </td>
+
+                                    <td>
+                                        <span class="plan-badge bronze">
+                                            Bronze
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge active">
+                                            Ativo
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Hoje, 09:42
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>#1045</td>
+
+                                    <td>
+                                        <strong>Ana Lima</strong>
+                                    </td>
+
+                                    <td>
+                                        ana@email.com
+                                    </td>
+
+                                    <td>
+                                        <span class="plan-badge diamante">
+                                            Diamante
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge active">
+                                            Ativo
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Ontem, 22:31
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ESTATÍSTICAS -->
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Estatísticas do sistema</h2>
+
+                            <p>
+                                Resumo da atividade recente.
+                            </p>
+                        </div>
+
+                        <div class="stats-period">
+                            <button class="active">7 dias</button>
+                            <button>30 dias</button>
+                            <button>90 dias</button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="system-stat-grid">
+
+                        <div class="system-stat">
+                            <span>Novos usuários</span>
+                            <strong>184</strong>
+                            <small class="positive">↑ 12%</small>
+                        </div>
+
+                        <div class="system-stat">
+                            <span>Novos bots</span>
+                            <strong>276</strong>
+                            <small class="positive">↑ 8%</small>
+                        </div>
+
+                        <div class="system-stat">
+                            <span>Pagamentos aprovados</span>
+                            <strong>128</strong>
+                            <small class="positive">↑ 15%</small>
+                        </div>
+
+                        <div class="system-stat">
+                            <span>Tickets ativos</span>
+                            <strong>42</strong>
+                            <small class="negative">↓ 3%</small>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- COLUNA DIREITA -->
+            <aside class="admin-right-column">
+
+
+                <!-- PIX -->
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Configurações PIX</h2>
+
+                            <p>
+                                Dados dos pagamentos.
+                            </p>
+                        </div>
+
+                        <button
+                            class="admin-edit-button"
+                            type="button"
+                        >
+                            Editar
+                        </button>
+
+                    </div>
+
+
+                    <div class="pix-info">
+
+                        <div class="pix-row">
+                            <span>Chave PIX</span>
+                            <strong>••••••@gmail.com</strong>
+                        </div>
+
+                        <div class="pix-row">
+                            <span>Nome do recebedor</span>
+                            <strong>Zyphor Cloud</strong>
+                        </div>
+
+                        <div class="pix-row">
+                            <span>Banco / Instituição</span>
+                            <strong>Banco do Brasil</strong>
+                        </div>
+
+                        <div class="pix-row">
+                            <span>Instruções</span>
+                            <strong>
+                                Após o pagamento, envie o comprovante
+                                pelo painel.
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- AÇÕES RÁPIDAS -->
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Ações rápidas</h2>
+                            <p>Acessos administrativos.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <button type="button">
+                            <span>◇</span>
+
+                            <div>
+                                <strong>Gerenciar planos</strong>
+                                <small>Editar planos e recursos</small>
+                            </div>
+                        </button>
+
+
+                        <button type="button">
+                            <span>▣</span>
+
+                            <div>
+                                <strong>Configurar PIX</strong>
+                                <small>Dados de pagamento</small>
+                            </div>
+                        </button>
+
+
+                        <button type="button">
+                            <span>▤</span>
+
+                            <div>
+                                <strong>Ver logs</strong>
+                                <small>Sistema e erros</small>
+                            </div>
+                        </button>
+
+
+                        <a href="suporte.html">
+                            <span>?</span>
+
+                            <div>
+                                <strong>Suporte</strong>
+                                <small>Gerenciar tickets</small>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ATIVIDADE -->
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Atividade recente</h2>
+                            <p>Últimas ações.</p>
+                        </div>
+
+                        <button class="admin-link" type="button">
+                            Ver todos
+                        </button>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+                            <span class="activity-dot green"></span>
+
+                            <div>
+                                <strong>Pagamento aprovado</strong>
+                                <small>Maria Santos • Prata</small>
+                            </div>
+
+                            <time>12 min</time>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-dot blue"></span>
+
+                            <div>
+                                <strong>Novo ticket de suporte</strong>
+                                <small>Pedro Costa</small>
+                            </div>
+
+                            <time>27 min</time>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-dot green"></span>
+
+                            <div>
+                                <strong>Usuário registrado</strong>
+                                <small>João Silva • Ouro</small>
+                            </div>
+
+                            <time>34 min</time>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-dot blue"></span>
+
+                            <div>
+                                <strong>Bot iniciado</strong>
+                                <small>Ana Lima</small>
+                            </div>
+
+                            <time>1 h</time>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-dot red"></span>
+
+                            <div>
+                                <strong>Pagamento rejeitado</strong>
+                                <small>Cliente</small>
+                            </div>
+
+                            <time>1 h</time>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SEGURANÇA -->
+                <section class="admin-panel admin-security">
+
+                    <div class="security-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Sistema protegido</strong>
+
+                        <p>
+                            Painel administrativo protegido
+                            por permissões.
+                        </p>
+                    </div>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="admin-footer">
+
+            <span>
+                Zyphor Cloud
+            </span>
+
+            <span>•</span>
+
+            <span>
+                Painel Administrativo
+            </span>
+
+            <span class="footer-spacer"></span>
+
+            <span>
+                Sistema online
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+  </html>
