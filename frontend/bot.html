@@ -1,1 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bot — Zyphor Cloud</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="sidebar-logo">
+            ZYPHOR<span>CLOUD</span>
+        </a>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="bots.html" class="active">
+                <span>◈</span>
+                Meus bots
+            </a>
+
+            <a href="deploy.html">
+                <span>＋</span>
+                Criar bot
+            </a>
+
+            <a href="planos.html">
+                <span>◇</span>
+                Planos
+            </a>
+
+            <a href="pagamentos.html">
+                <span>▣</span>
+                Pagamentos
+            </a>
+
+            <a href="suporte.html">
+                <span>?</span>
+                Suporte
+            </a>
+
+            <a href="conta.html">
+                <span>○</span>
+                Minha conta
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="dashboard-content">
+
+        <header class="bot-header">
+
+            <div class="bot-title">
+
+                <a href="bots.html" class="back-link">
+                    ← Meus bots
+                </a>
+
+                <div class="bot-heading">
+
+                    <div class="large-bot-icon">
+                        Z
+                    </div>
+
+                    <div>
+
+                        <div class="bot-name-row">
+
+                            <h1>
+                                Meu Bot
+                            </h1>
+
+                            <span class="bot-status online">
+                                ● Online
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Discord • Node.js
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="bot-actions">
+
+                <button class="button secondary">
+                    Reiniciar
+                </button>
+
+                <button class="button primary">
+                    Iniciar bot
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div class="bot-tabs">
+
+            <button class="active">
+                Visão geral
+            </button>
+
+            <button>
+                Arquivos
+            </button>
+
+            <button>
+                Console
+            </button>
+
+            <button>
+                Variáveis
+            </button>
+
+            <button>
+                Configurações
+            </button>
+
+        </div>
+
+
+        <section class="bot-stats">
+
+            <div class="stat-card">
+
+                <span>STATUS</span>
+
+                <strong class="status-text">
+                    Online
+                </strong>
+
+                <small>
+                    Funcionando normalmente
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>CPU</span>
+
+                <strong>
+                    2.4%
+                </strong>
+
+                <small>
+                    Uso atual
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>MEMÓRIA</span>
+
+                <strong>
+                    84 MB
+                </strong>
+
+                <small>
+                    Uso atual
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>UPTIME</span>
+
+                <strong>
+                    02h 41m
+                </strong>
+
+                <small>
+                    Desde o último início
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <section class="bot-grid-layout">
+
+
+            <div class="dashboard-panel console-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Console
+                        </h2>
+
+                        <p>
+                            Logs recentes do seu bot.
+                        </p>
+
+                    </div>
+
+                    <span class="console-live">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="console">
+
+                    <div class="console-line">
+                        <span>18:41:02</span>
+                        <b>INFO</b>
+                        Bot iniciando...
+                    </div>
+
+                    <div class="console-line">
+                        <span>18:41:04</span>
+                        <b>INFO</b>
+                        Conectando ao Discord...
+                    </div>
+
+                    <div class="console-line">
+                        <span>18:41:05</span>
+                        <b>INFO</b>
+                        Login realizado com sucesso.
+                    </div>
+
+                    <div class="console-line">
+                        <span>18:41:06</span>
+                        <b>INFO</b>
+                        Bot online.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Informações
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bot-info">
+
+                    <div class="info-row">
+
+                        <span>Nome</span>
+
+                        <strong>
+                            Meu Bot
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Runtime</span>
+
+                        <strong>
+                            Node.js
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Branch</span>
+
+                        <strong>
+                            main
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Arquivo</span>
+
+                        <strong>
+                            index.js
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Criado em</span>
+
+                        <strong>
+                            23/09/2026
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="dashboard-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Arquivos do projeto
+                    </h2>
+
+                    <p>
+                        Acesse rapidamente os arquivos do seu bot.
+                    </p>
+
+                </div>
+
+                <a href="#">
+                    Abrir gerenciador
+                </a>
+
+            </div>
+
+
+            <div class="file-preview">
+
+                <div class="file-item">
+                    <span>JS</span>
+                    <strong>index.js</strong>
+                    <small>4.2 KB</small>
+                </div>
+
+                <div class="file-item">
+                    <span>JSON</span>
+                    <strong>package.json</strong>
+                    <small>1.8 KB</small>
+                </div>
+
+                <div class="file-item">
+                    <span>TXT</span>
+                    <strong>README.md</strong>
+                    <small>2.1 KB</small>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
