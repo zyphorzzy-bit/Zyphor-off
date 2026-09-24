@@ -287,3 +287,359 @@
     }
 
 }
+/* =========================
+   BOT PAGE
+========================= */
+
+.bot-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.back-link {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #666;
+
+    font-size: 11px;
+}
+
+.back-link:hover {
+    color: #aaa;
+}
+
+.bot-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.large-bot-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #333;
+    border-radius: 13px;
+
+    background: #151515;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.bot-name-row {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.bot-name-row h1 {
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+
+.bot-heading p {
+    margin-top: 3px;
+
+    color: #666;
+
+    font-size: 11px;
+}
+
+.bot-status {
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+}
+
+.bot-status.online {
+    background: rgba(85, 216, 138, 0.08);
+
+    color: var(--green);
+}
+
+.bot-actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+/* TABS */
+
+.bot-tabs {
+    display: flex;
+
+    gap: 4px;
+
+    margin-bottom: 15px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.bot-tabs button {
+    padding: 12px 14px;
+
+    border: 0;
+
+    border-bottom: 2px solid transparent;
+
+    background: transparent;
+
+    color: #666;
+
+    font-size: 11px;
+}
+
+.bot-tabs button:hover {
+    color: #aaa;
+}
+
+.bot-tabs button.active {
+    border-bottom-color: #fff;
+
+    color: #fff;
+}
+
+
+/* BOT STATS */
+
+.bot-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.status-text {
+    color: var(--green);
+}
+
+
+/* BOT GRID */
+
+.bot-grid-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+/* CONSOLE */
+
+.console-panel {
+    min-width: 0;
+}
+
+.console-live {
+    color: var(--green);
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.console {
+    min-height: 260px;
+
+    padding: 18px;
+
+    background: #050505;
+
+    font-family: monospace;
+
+    overflow-x: auto;
+}
+
+.console-line {
+    margin-bottom: 10px;
+
+    color: #999;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+.console-line span {
+    margin-right: 10px;
+
+    color: #555;
+}
+
+.console-line b {
+    margin-right: 8px;
+
+    color: #aaa;
+
+    font-size: 9px;
+}
+
+
+/* INFO */
+
+.bot-info {
+    padding: 10px 20px 15px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #1b1b1b;
+
+    font-size: 11px;
+}
+
+.info-row:last-child {
+    border-bottom: 0;
+}
+
+.info-row span {
+    color: #666;
+}
+
+.info-row strong {
+    color: #ccc;
+
+    text-align: right;
+}
+
+
+/* FILES */
+
+.file-preview {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    padding: 18px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: #0d0d0d;
+}
+
+.file-item > span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background: #1a1a1a;
+
+    color: #999;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.file-item strong {
+    font-size: 10px;
+}
+
+.file-item small {
+    margin-left: auto;
+
+    color: #555;
+
+    font-size: 9px;
+}
+
+
+@media (max-width: 850px) {
+
+    .bot-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .bot-actions {
+        width: 100%;
+    }
+
+    .bot-actions .button {
+        flex: 1;
+    }
+
+    .bot-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bot-grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .bot-tabs {
+        overflow-x: auto;
+    }
+
+    .bot-tabs button {
+        white-space: nowrap;
+    }
+
+    .bot-name-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .bot-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .file-preview {
+        grid-template-columns: 1fr;
+    }
+
+}
