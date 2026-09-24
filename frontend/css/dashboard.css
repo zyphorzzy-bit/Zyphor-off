@@ -373,3 +373,186 @@
 
     font-size: 12px;
 }
+/* =========================
+   PLANS
+========================= */
+
+.plans-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 440px;
+
+    padding: 24px;
+
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    background: var(--card);
+}
+
+.plan-card.featured {
+    border-color: #444;
+}
+
+.plan-card.diamond {
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0d0d0d
+        );
+}
+
+.plan-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plan-name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.plan-tag {
+    padding: 4px 7px;
+
+    border: 1px solid #333;
+    border-radius: 5px;
+
+    color: #777;
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.plan-tag.highlight {
+    color: #ddd;
+    border-color: #555;
+}
+
+.plan-price {
+    display: flex;
+    align-items: baseline;
+
+    gap: 5px;
+
+    margin-top: 25px;
+}
+
+.plan-price strong {
+    font-size: 30px;
+
+    letter-spacing: -1px;
+}
+
+.plan-price span {
+    color: #666;
+
+    font-size: 11px;
+}
+
+.plan-description {
+    min-height: 42px;
+
+    margin: 10px 0 22px;
+
+    color: #777;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.plan-features {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.plan-features li {
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+.plan-button {
+    width: 100%;
+
+    margin-top: auto;
+}
+
+.plans-note {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+    padding: 18px 20px;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    background: #0d0d0d;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+.plans-note strong {
+    color: #ccc;
+}
+
+.plans-note a {
+    margin-left: auto;
+
+    color: #bbb;
+}
+
+.plans-note a:hover {
+    color: #fff;
+}
+
+
+@media (max-width: 1100px) {
+
+    .plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plans-note {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .plans-note a {
+        margin-left: 0;
+    }
+
+}
