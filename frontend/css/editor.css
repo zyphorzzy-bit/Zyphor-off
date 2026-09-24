@@ -1,1 +1,289 @@
+.editor-layout {
+    display: grid;
 
+    grid-template-columns: minmax(0, 1fr) 280px;
+
+    gap: 18px;
+}
+
+.editor-main {
+    min-width: 0;
+}
+
+.editor-panel {
+    margin-bottom: 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    background: var(--card);
+
+    overflow: hidden;
+}
+
+.editor-panel-header {
+    padding: 20px 22px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.editor-panel-header h2 {
+    font-size: 15px;
+}
+
+.editor-panel-header p {
+    margin-top: 4px;
+
+    color: #666;
+
+    font-size: 11px;
+}
+
+.editor-form {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    padding: 22px;
+}
+
+.editor-form label,
+.source-input label {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+.editor-form label:first-child {
+    grid-column: 1 / -1;
+}
+
+.editor-form input,
+.editor-form select,
+.source-input input {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #0b0b0b;
+    color: #ddd;
+
+    font-size: 12px;
+}
+
+.editor-form input:focus,
+.editor-form select:focus,
+.source-input input:focus {
+    border-color: #555;
+}
+
+.editor-form input::placeholder,
+.source-input input::placeholder {
+    color: #555;
+}
+
+
+/* SOURCE */
+
+.source-options {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 20px 22px 0;
+}
+
+.source-card {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    background: #0c0c0c;
+
+    color: #aaa;
+
+    text-align: left;
+}
+
+.source-card:hover {
+    border-color: #444;
+}
+
+.source-card.active {
+    border-color: #666;
+
+    background: #151515;
+
+    color: #fff;
+}
+
+.source-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #1c1c1c;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.source-card strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.source-card small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #666;
+
+    font-size: 10px;
+}
+
+.source-input {
+    padding: 20px 22px 22px;
+}
+
+
+/* SUMMARY */
+
+.editor-side {
+    min-width: 0;
+}
+
+.deploy-summary {
+    position: sticky;
+    top: 95px;
+
+    padding: 22px;
+
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    background: var(--card);
+}
+
+.deploy-summary h3 {
+    margin-bottom: 25px;
+
+    font-size: 17px;
+}
+
+.summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #1c1c1c;
+
+    font-size: 12px;
+}
+
+.summary-row span {
+    color: #666;
+}
+
+.summary-row strong {
+    color: #ddd;
+}
+
+.summary-status {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    color: #777;
+
+    font-size: 10px;
+}
+
+
+/* ACTIONS */
+
+.editor-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 5px;
+}
+
+
+@media (max-width: 850px) {
+
+    .editor-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-side {
+        order: -1;
+    }
+
+    .deploy-summary {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .editor-form {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-form label:first-child {
+        grid-column: auto;
+    }
+
+    .source-options {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-actions {
+        flex-direction: column-reverse;
+    }
+
+    .editor-actions .button {
+        width: 100%;
+    }
+
+}
